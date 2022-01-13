@@ -4,23 +4,26 @@ type Query {
 }
 
 type Mutation {
-  addHouse(owner_name_lastname: String!
-  land_line: String,
-  cellphone: String,
-  province: String!,
-  municipality: String!,
-  address: String!,
-  type: String!,
-  construction: String!,
-  carpentry: String!,
-  garage: String!,
-  status: String!,
-  square_meters: String,
-  price: String!,
-  interiors: String,
-  exteriors: String,
-  visited: Boolean,
-  images_path: String, observations: String): House!
+  addHouse(
+    owner_name_lastname: String!
+    land_line: String,
+    cellphone: String,
+    province: String!,
+    municipality: String!,
+    address: String!,
+    type: String!,
+    construction: String!,
+    carpentry: String!,
+    garage: String!,
+    status: String!,
+    square_meters: String,
+    price: String!,
+    interiors: String,
+    exteriors: String,
+    visited: Boolean,
+    images_path: String,
+    observations: String
+  ): House!
   signup(password: String!, name: String!): AuthPayload
   login(email: String!, password: String!): AuthPayload
   removeHouse(id: String!): String

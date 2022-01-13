@@ -4,7 +4,7 @@ const { APP_SECRET, getUserId } = require('../utils')
 
 async function addHouse(parent, args, context, info) {
   
-    const newHouse = await context.house.link.create({
+    const newHouse = await context.prisma.house.create({
       data: {
         owner_name_lastname: args.owner_name_lastname,
         land_line: args.land_line,
