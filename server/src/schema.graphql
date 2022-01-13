@@ -1,0 +1,69 @@
+type Query {
+  getHouses(filter: String, skip: Int, take: Int, orderBy: HouseOrderByInput): [House!]!
+  houseById(id: String): House!
+}
+
+type Mutation {
+  addHouse(owner_name_lastname: String!
+  land_line: String,
+  cellphone: String,
+  province: String!,
+  municipality: String!,
+  address: String!,
+  type: String!,
+  construction: String!,
+  carpentry: String!,
+  garage: String!,
+  status: String!,
+  square_meters: String,
+  price: String!,
+  interiors: String,
+  exteriors: String,
+  visited: Boolean,
+  images_path: String, observations: String): House!
+  signup(password: String!, name: String!): AuthPayload
+  login(email: String!, password: String!): AuthPayload
+  removeHouse(id: String!): String
+}
+
+type House {
+  id: Int
+  owner_name_lastname: String
+  land_line: String
+  cellphone: String
+  province: String
+  municipality: String
+  address: String
+  type: String
+  construction: String
+  carpentry: String
+  garage: String
+  status: String
+  square_meters: String
+  price: String
+  interiors: String
+  exteriors: String
+  visited: Boolean
+  images_path: String
+  observations: String
+}
+
+type AuthPayload {
+  token: String
+  user: User
+}
+
+type User {
+  id: ID!
+  name: String!
+}
+
+input HouseOrderByInput {
+  price: Sort
+  createdAt: Sort
+}
+
+enum Sort {
+  asc
+  desc
+}
