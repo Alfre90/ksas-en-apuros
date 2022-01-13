@@ -58,7 +58,7 @@ async function signup(parent, args, context, info) {
   
   async function login(parent, args, context, info) {
     // 1
-    const user = await context.prisma.user.findUnique({ where: { name: args.name } })
+    const user = await context.prisma.user.findUnique({ where: { name: args.username } })
     if (!user) {
       throw new Error('No such user found')
     }

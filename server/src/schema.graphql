@@ -24,8 +24,8 @@ type Mutation {
     images_path: String,
     observations: String
   ): House!
-  signup(password: String!, name: String!): AuthPayload
-  login(email: String!, password: String!): AuthPayload
+  signup(password: String!, username: String!): AuthPayload
+  login(username: String!, password: String!): AuthPayload
   removeHouse(id: String!): String
 }
 
