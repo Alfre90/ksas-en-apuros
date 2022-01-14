@@ -95,8 +95,8 @@ export default function Login() {
               name="username"
               autoComplete="username"
               autoFocus
-              error={error && error.message == 'No such user found'}
-              helperText={error && error.message == 'No such user found' ? error.message : ''}
+              error={error && error.message === 'No such user found'}
+              helperText={error && error.message === 'No such user found' ? error.message : ''}
             />
             <TextField
               margin="normal"
@@ -107,8 +107,8 @@ export default function Login() {
               type="password"
               id="password"
               autoComplete="current-password"
-              error={error && error.message == 'Invalid password'}
-              helperText={error && error.message == 'Invalid password' ? error.message : ''}
+              error={error && error.message === 'Invalid password'}
+              helperText={error && error.message === 'Invalid password' ? error.message : ''}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
